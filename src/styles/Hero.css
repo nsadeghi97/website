@@ -1,0 +1,556 @@
+.hero {
+  background-color: var(--bg-color);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 30px;
+  position: relative;
+  color: var(--text-color);
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(0, 200, 255, 0.05) 0%, transparent 70%);
+  z-index: 0;
+}
+
+.hero-container {
+  max-width: 1200px;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 72px;
+  margin-bottom: 24px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 20px rgba(0, 200, 255, 0.3);
+  position: relative;
+}
+
+.hero h1::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+}
+
+.hero p {
+  font-size: 24px;
+  margin-bottom: 40px;
+  max-width: 700px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.8);
+  letter-spacing: 1px;
+}
+
+.hero-image {
+  width: 250px;
+  height: 250px;
+  margin-bottom: 32px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(77, 168, 218, 0.5);
+  border: 5px solid #4da8da;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-btns {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.btn {
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-primary {
+  background-color: #4da8da;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #3a8bbd;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.btn-outline:hover {
+  background-color: #fff;
+  color: #1a1a1a;
+  transform: translateY(-2px);
+}
+
+.hero-meme-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.3;
+}
+
+.meme-beaver {
+  position: absolute;
+  font-size: 80px;
+  animation: float 15s infinite linear;
+  opacity: 0.9;
+  filter: drop-shadow(0 0 15px var(--primary-color));
+  text-shadow: 0 0 20px rgba(0, 200, 255, 0.8);
+  z-index: 1;
+}
+
+.meme-beaver:nth-child(1) {
+  top: 10%;
+  left: 10%;
+  animation-duration: 20s;
+  animation-delay: 0s;
+  transform: rotate(15deg);
+}
+
+.meme-beaver:nth-child(2) {
+  top: 70%;
+  left: 20%;
+  animation-duration: 25s;
+  animation-delay: 2s;
+  transform: rotate(-10deg);
+}
+
+.meme-beaver:nth-child(3) {
+  top: 40%;
+  left: 80%;
+  animation-duration: 18s;
+  animation-delay: 5s;
+  transform: rotate(20deg);
+}
+
+.meme-beaver:nth-child(4) {
+  top: 20%;
+  left: 60%;
+  animation-duration: 22s;
+  animation-delay: 7s;
+  transform: rotate(-15deg);
+}
+
+.meme-beaver:nth-child(5) {
+  top: 80%;
+  left: 70%;
+  animation-duration: 19s;
+  animation-delay: 3s;
+  transform: rotate(10deg);
+}
+
+.meme-beaver:nth-child(6) {
+  top: 30%;
+  left: 30%;
+  animation-duration: 21s;
+  animation-delay: 8s;
+  transform: rotate(-20deg);
+}
+
+.meme-beaver:nth-child(7) {
+  top: 60%;
+  left: 40%;
+  animation-duration: 23s;
+  animation-delay: 1s;
+  transform: rotate(25deg);
+}
+
+.meme-beaver:nth-child(8) {
+  top: 50%;
+  left: 90%;
+  animation-duration: 17s;
+  animation-delay: 6s;
+  transform: rotate(-25deg);
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(50px, 50px) rotate(90deg);
+  }
+  50% {
+    transform: translate(0, 100px) rotate(180deg);
+  }
+  75% {
+    transform: translate(-50px, 50px) rotate(270deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(360deg);
+  }
+}
+
+/* Futuristic grid lines */
+.grid-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(0, 200, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 200, 255, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+  z-index: 0;
+}
+
+/* Newsletter Styles */
+.newsletter-container {
+  margin-top: 60px;
+  width: 100%;
+  max-width: 600px;
+  padding: 30px;
+  background-color: rgba(10, 10, 10, 0.6);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(5px);
+}
+
+.newsletter-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+  z-index: 1;
+}
+
+.newsletter-container h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+.newsletter-container p {
+  font-size: 16px;
+  margin-bottom: 25px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.newsletter-input {
+  flex: 1;
+  padding: 14px 20px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  color: var(--text-color);
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.newsletter-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 10px rgba(0, 200, 255, 0.3);
+}
+
+.newsletter-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.newsletter-btn {
+  padding: 14px 25px;
+  background: linear-gradient(45deg, var(--primary-color), var(--primary-dark));
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+}
+
+.newsletter-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: all 0.5s ease;
+}
+
+.newsletter-btn:hover::before {
+  left: 100%;
+}
+
+.newsletter-btn:hover {
+  box-shadow: 0 0 15px rgba(0, 200, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.newsletter-success {
+  padding: 15px;
+  background-color: rgba(0, 200, 255, 0.1);
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  text-align: center;
+}
+
+.newsletter-success p {
+  color: var(--primary-color);
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Gen Z Meme Elements */
+.hero-tagline {
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.highlight {
+  color: var(--primary-color);
+  font-weight: 700;
+  position: relative;
+}
+
+.emoji-pop {
+  display: inline-block;
+  animation: pop 1s infinite alternate;
+  margin-left: 5px;
+  transform-origin: center;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.3);
+  }
+}
+
+.meme-banner {
+  background: linear-gradient(90deg, #ff00cc, #3333ff);
+  padding: 10px 25px;
+  border-radius: 30px;
+  margin-bottom: 30px;
+  transform: rotate(-2deg);
+  box-shadow: 0 5px 15px rgba(255, 0, 204, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.meme-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transform: translateX(-100%);
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.meme-text {
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.floating-meme-text {
+  position: absolute;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 8px 15px;
+  border-radius: 20px;
+  animation: floatText 20s infinite linear;
+  z-index: 1;
+  backdrop-filter: blur(2px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transform-origin: center;
+}
+
+@keyframes floatText {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translate(30px, -30px) rotate(5deg) scale(1.1);
+  }
+  50% {
+    transform: translate(0, -60px) rotate(0deg) scale(1);
+  }
+  75% {
+    transform: translate(-30px, -30px) rotate(-5deg) scale(0.9);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+}
+
+.stonks-arrow {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  border-right: 10px solid var(--primary-color);
+  border-top: 10px solid var(--primary-color);
+  transform: rotate(45deg);
+  animation: stonks 3s infinite alternate;
+  z-index: 1;
+}
+
+.stonks-text {
+  position: absolute;
+  top: -40px;
+  right: -20px;
+  transform: rotate(-45deg);
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--primary-color);
+  text-shadow: 0 0 10px rgba(0, 200, 255, 0.5);
+}
+
+@keyframes stonks {
+  0% {
+    transform: rotate(45deg) scale(1);
+  }
+  100% {
+    transform: rotate(45deg) scale(1.3);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero h1 {
+    font-size: 42px;
+  }
+  
+  .hero p {
+    font-size: 18px;
+  }
+  
+  .hero-image {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .hero-btns {
+    flex-direction: column;
+  }
+  
+  .meme-beaver {
+    font-size: 60px;
+  }
+  
+  .newsletter-form {
+    flex-direction: column;
+  }
+  
+  .newsletter-input, .newsletter-btn {
+    width: 100%;
+  }
+  
+  .newsletter-container {
+    padding: 20px;
+  }
+  
+  .hero-tagline {
+    font-size: 20px;
+  }
+  
+  .meme-banner {
+    padding: 8px 20px;
+    margin-bottom: 20px;
+  }
+  
+  .meme-text {
+    font-size: 14px;
+  }
+  
+  .floating-meme-text {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+  
+  .stonks-arrow {
+    width: 60px;
+    height: 60px;
+    border-width: 6px;
+  }
+  
+  .stonks-text {
+    font-size: 16px;
+    top: -30px;
+    right: -15px;
+  }
+} 

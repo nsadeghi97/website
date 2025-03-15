@@ -1,0 +1,148 @@
+.footer {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 80px 0 20px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 60px;
+  margin-bottom: 60px;
+}
+
+.footer-logo {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-logo h3 {
+  font-size: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  color: #4da8da;
+}
+
+.footer-logo p {
+  font-size: 14px;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.footer-links {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-links h4 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  color: #4da8da;
+}
+
+.footer-social {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-social h4 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.social-icons {
+  display: flex;
+  gap: 16px;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+  border-radius: 50%;
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: #4da8da;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  color: #ccc;
+  margin: 0;
+}
+
+.footer-legal {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-legal a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.footer-legal a:hover {
+  color: #4da8da;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+} 
